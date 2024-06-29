@@ -1,0 +1,36 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id "com.github.johnrengelman.shadow" version "7.1.2"
+}
+
+group = 'org.nightfall'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    gradlePluginPortal()
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation("com.formdev:flatlaf:3.4.1")
+    implementation("com.miglayout:miglayout-swing:11.3")
+    implementation("com.badlogicgames.gdx:gdx:1.12.1")
+    implementation("com.badlogicgames.gdx:gdx-backend-lwjgl3:1.12.1")
+    implementation("com.badlogicgames.gdx:gdx-platform:1.12.1:natives-desktop")
+    implementation("com.github.mgsx-dev.gdx-gltf:gltf:2.2.1")
+    implementation "org.jetbrains.kotlin:kotlin-reflect:2.0.0"
+    /*implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
+    implementation("io.github.libktx:ktx-async:1.12.1-rc1")
+    implementation("io.github.libktx:ktx-app:1.12.1-rc1")
+    implementation("io.github.libktx:ktx-graphics:1.12.1-rc1")
+    implementation("io.github.libktx:ktx-ai:1.12.1-rc1")*/
+}
+
+test {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(17)
+}

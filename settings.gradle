@@ -3,4 +3,5 @@ plugins {
 }
 rootProject.name = 'Nightfall-jvm'
 include 'default-mods'
+include 'framework'
 

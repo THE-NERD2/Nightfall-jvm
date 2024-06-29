@@ -7,6 +7,8 @@ import javax.swing.JButton
 import javax.swing.JFrame
 import javax.swing.JPanel
 import javax.swing.SwingUtilities
+import org.nightfall.mods.Mods
+import org.nightfall.worldgen.World
 
 class UI: JPanel() {
     init {
@@ -15,7 +17,9 @@ class UI: JPanel() {
             layout = MigLayout()
             add(JButton("Create world").apply {
                 addActionListener {
-                    // TODO
+                    // TODO: get size from user
+                    val world = World(30, 30, 30)
+                    // TODO: open in GDX window
                 }
             }, "east")
         }, "north")
@@ -29,7 +33,8 @@ class UI: JPanel() {
     }
 }
 
-fun main() {
+fun main(args: Array<String>) {
+    Mods.initialize(args)
     FlatDarkLaf.setup()
     SwingUtilities.invokeLater {
         val frame = JFrame("Nightfall")

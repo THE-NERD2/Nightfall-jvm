@@ -10,6 +10,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/default-mods" />
+            <option value="$PROJECT_DIR$/framework" />
           </set>
         </option>
       </GradleProjectSettings>

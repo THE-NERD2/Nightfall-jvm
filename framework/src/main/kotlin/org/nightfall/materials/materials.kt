@@ -6,9 +6,10 @@ import com.badlogic.gdx.graphics.Texture
 import com.badlogic.gdx.graphics.g3d.Material
 import com.badlogic.gdx.graphics.g3d.Model
 import com.badlogic.gdx.graphics.g3d.attributes.TextureAttribute
+import org.nightfall.worldgen.World
 import java.io.Serializable
 
-abstract class Tile(val x: Int, val y: Int, val z: Int): Serializable {
+abstract class Tile(val world: World, val x: Int, val y: Int, val z: Int): Serializable {
     abstract val modelPath: String
     abstract val texturePath: String
     lateinit var model: Model
