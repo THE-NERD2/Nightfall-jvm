@@ -1,5 +1,7 @@
 package org.nightfall
 
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
+import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 import com.formdev.flatlaf.FlatDarkLaf
 import net.miginfocom.swing.MigLayout
 import java.io.File
@@ -18,8 +20,13 @@ class UI: JPanel() {
             add(JButton("Create world").apply {
                 addActionListener {
                     // TODO: get size from user
-                    val world = World(30, 30, 30)
-                    // TODO: open in GDX window
+                    val world = World(30, 3, 30)
+                    val config = Lwjgl3ApplicationConfiguration()
+                    config.setTitle("Nightfall")
+                    config.setWindowedMode(800, 600)
+                    config.useVsync(true)
+                    config.setForegroundFPS(60)
+                    Lwjgl3Application(GameWindow(world), config)
                 }
             }, "east")
         }, "north")
