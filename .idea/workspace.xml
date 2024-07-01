@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="Added world generation">
-      <change afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" afterDir="false" />
+    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="New worlds now opened in game window. GLTF rendering broken">
+      <change afterPath="$PROJECT_DIR$/default-mods/src/main/resources/models/grass_1111.gltf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/org/nightfall/default/models/cube_1111.gltf" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/resources/models/cube_1111.gltf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/org/nightfall/default/textures/grass.png" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/resources/textures/grass.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/framework/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/models/cube_1111.gltf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/textures/grass.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +209,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719705507945</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="New worlds now opened in game window. GLTF rendering broken">
+      <option name="closed" value="true" />
+      <created>1719864898181</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719864898181</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +234,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added mods module, tile api, default tiles/dummy textures" />
     <MESSAGE value="Added world generation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added world generation" />
+    <MESSAGE value="New worlds now opened in game window. GLTF rendering broken" />
+    <option name="LAST_COMMIT_MESSAGE" value="New worlds now opened in game window. GLTF rendering broken" />
   </component>
 </project>
