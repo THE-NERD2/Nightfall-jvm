@@ -60,7 +60,7 @@ class GameWindow(private val world: World): KtxApplicationAdapter {
                 for(z in 0..world.sizeZ) {
                     val tile = world.getBlock(x, y, z)
                     if(tile is TileInstance<*>) {
-                        modelBatch.render(tile.instance, env)
+                        if(cam.frustum.boundsInFrustum(tile.bbox) && !tile.occluded) modelBatch.render(tile.instance, env)
                     }
                 }
             }

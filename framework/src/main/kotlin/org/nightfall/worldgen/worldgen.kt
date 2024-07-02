@@ -3,12 +3,17 @@ package org.nightfall.worldgen
 import org.nightfall.Point
 import org.nightfall.materials.TileInstance
 import org.nightfall.mods.Mods
+import org.nightfall.TileMap
 import java.io.Serializable
 import kotlin.reflect.full.primaryConstructor
 
 class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
     private var initialized = false
-    private val tiles = mutableMapOf<Point, TileInstance<*>>()
+    val tiles: TileMap = TileMap { point, _ ->
+        point.orthogonals.forEach {
+            this[it]?.calculateOcclusion()
+        }
+    }
 
     fun initialize() = if(!initialized) {
         val worldGenerators: List<WorldGenerator> = Mods.worldGenerators.map {

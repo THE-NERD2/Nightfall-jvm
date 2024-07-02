@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="New worlds now opened in game window. GLTF rendering broken">
-      <change afterPath="$PROJECT_DIR$/default-mods/src/main/resources/models/grass_1111.gltf" afterDir="false" />
+    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="No more texturing models at runtime, fixes rendering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/models/cube_1111.gltf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/resources/textures/grass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,29 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Nightfall.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build Nightfall-jvm.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build all.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build framework.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build mods.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Nightfall-jvm [:MainKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.Build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Nightfall.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Nightfall.executor": "Run",
+    "Gradle.Build Nightfall-jvm.executor": "Run",
+    "Gradle.Build all.executor": "Run",
+    "Gradle.Build framework.executor": "Run",
+    "Gradle.Build mods.executor": "Run",
+    "Gradle.Build.executor": "Run",
+    "Gradle.Nightfall-jvm [:MainKt.main()].executor": "Run",
+    "Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.Build.executor": "Run",
+    "Shell Script.Nightfall.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "shared-indexes"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/home/payton/.gradle&quot;
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "/home/payton/.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/default-mods/src/main/resources" />
@@ -217,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719864898181</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="No more texturing models at runtime, fixes rendering">
+      <option name="closed" value="true" />
+      <created>1719865740484</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719865740485</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +243,17 @@
     <MESSAGE value="Added mods module, tile api, default tiles/dummy textures" />
     <MESSAGE value="Added world generation" />
     <MESSAGE value="New worlds now opened in game window. GLTF rendering broken" />
-    <option name="LAST_COMMIT_MESSAGE" value="New worlds now opened in game window. GLTF rendering broken" />
+    <MESSAGE value="No more texturing models at runtime, fixes rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="No more texturing models at runtime, fixes rendering" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

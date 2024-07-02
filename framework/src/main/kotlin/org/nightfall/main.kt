@@ -20,7 +20,7 @@ class UI: JPanel() {
             add(JButton("Create world").apply {
                 addActionListener {
                     // TODO: get size from user
-                    val world = World(30, 3, 30)
+                    val world = World(30, 4, 30)
                     val config = Lwjgl3ApplicationConfiguration()
                     config.setTitle("Nightfall")
                     config.setWindowedMode(800, 600)
