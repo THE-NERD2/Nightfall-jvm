@@ -40,7 +40,7 @@ class TileInstance<T: Tile>(val type: T, val world: World, val x: Int, val y: In
         calculateOcclusion()
     }
     fun calculateOcclusion() {
-        occluded = Point(x, y, z).orthogonals.all { world.tiles[it]?.type?.occludes ?: false }
+        occluded = Point(x, y, z).orthogonals.all { world[it]?.type?.occludes ?: false }
     }
     fun dispose() = type.model.dispose()
 }
