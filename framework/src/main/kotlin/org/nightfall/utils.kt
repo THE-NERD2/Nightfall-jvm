@@ -14,7 +14,7 @@ data class Point(val x: Int, val y: Int, val z: Int) {
 
 class TileMap(
     private val map: MutableMap<Point, TileInstance<*>> = mutableMapOf(),
-    private val onSet: TileMap.(Point, TileInstance<*>?) -> Unit
+    private val onSet: (Point, TileInstance<*>?) -> Unit
 ): MutableMap<Point, TileInstance<*>> by map {
     operator fun set(key: Point, value: TileInstance<*>?) {
         if(value == null) {

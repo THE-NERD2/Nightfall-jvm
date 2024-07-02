@@ -58,7 +58,7 @@ class GameWindow(private val world: World): KtxApplicationAdapter {
         for(x in 0..world.sizeX) {
             for(y in 0..world.sizeY) {
                 for(z in 0..world.sizeZ) {
-                    val tile = world.getBlock(x, y, z)
+                    val tile = world[Point(x, y, z)]
                     if(tile is TileInstance<*>) {
                         if(cam.frustum.boundsInFrustum(tile.bbox) && !tile.occluded) modelBatch.render(tile.instance, env)
                     }
@@ -72,7 +72,7 @@ class GameWindow(private val world: World): KtxApplicationAdapter {
         for(x in 0..world.sizeX) {
             for(y in 0..world.sizeY) {
                 for(z in 0..world.sizeZ) {
-                    world.getBlock(x, y, z)?.dispose()
+                    world.get(Point(x, y, z))?.dispose()
                 }
             }
         }

@@ -9,7 +9,7 @@ import kotlin.reflect.full.primaryConstructor
 
 class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
     private var initialized = false
-    val tiles: TileMap = TileMap { point, _ ->
+    private val tiles: TileMap = TileMap { point, _ ->
         point.orthogonals.forEach {
             this[it]?.calculateOcclusion()
         }
@@ -25,7 +25,7 @@ class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
                     for(z in 0..sizeZ) {
                         val newBlock = it.addBlock(this, x, y, z)
                         if(newBlock is TileInstance<*>) {
-                            tiles[Point(x, y, z)] = newBlock
+                            this[Point(x, y, z)] = newBlock
                         }
                     }
                 }
@@ -33,7 +33,12 @@ class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
         }
         initialized = true
     } else {}
-    fun getBlock(x: Int, y: Int, z: Int) = tiles[Point(x, y, z)]
+    operator fun get(point: Point): TileInstance<*>? {
+        return tiles[point]
+    }
+    operator fun set(point: Point, instance: TileInstance<*>?) {
+        tiles[point] = instance
+    }
 }
 abstract class WorldGenerator {
     enum class Order(val value: Int) {
