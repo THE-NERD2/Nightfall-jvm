@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="worldgen refactoring (for real this time)">
-      <change afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/settings/settings.kt" afterDir="false" />
+    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="Lots of API refactoring to prepare for new world generation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/framework/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/mods/mods.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/mods/mods.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719949834124</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Lots of API refactoring to prepare for new world generation">
+      <option name="closed" value="true" />
+      <created>1720053238373</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720053238374</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,7 +276,8 @@
     <MESSAGE value="Added frustum and occlusion culling optimizations" />
     <MESSAGE value="worldgen refactoring" />
     <MESSAGE value="worldgen refactoring (for real this time)" />
-    <option name="LAST_COMMIT_MESSAGE" value="worldgen refactoring (for real this time)" />
+    <MESSAGE value="Lots of API refactoring to prepare for new world generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lots of API refactoring to prepare for new world generation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

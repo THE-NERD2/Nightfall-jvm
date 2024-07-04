@@ -1,7 +1,9 @@
 package org.nightfall.default.worldgen
 
 import org.nightfall.Point
+import org.nightfall.default.tiles.DirtTile
 import org.nightfall.default.tiles.GrassTile
+import org.nightfall.default.tiles.StoneTile
 import org.nightfall.materials.TileInstance
 import org.nightfall.settings.CheckboxSetting
 import org.nightfall.worldgen.World
@@ -22,7 +24,13 @@ class FlatGen: WorldGenerator() {
     override val order = Order.AFTER_NATURE
     override fun addBlock(world: World, x: Int, y: Int, z: Int): TileInstance<*>? {
         if(inUse) {
-            return if (y < world.sizeY - 1) TileInstance(GrassTile, world, x, y, z) else null
+            if(y < world.sizeY - 6) {
+                return TileInstance(StoneTile, world, x, y, z)
+            } else if(y < world.sizeY - 2) {
+                return TileInstance(DirtTile, world, x, y, z)
+            } else if(y < world.sizeY - 1) {
+                return TileInstance(GrassTile, world, x, y, z)
+            } else return null
         } else return world[Point(x, y, z)]
     }
 }

@@ -25,7 +25,7 @@ class UI: JPanel() {
                     dialog.add(JButton("OK").apply {
                         addActionListener {
                             dialog.isVisible = false
-                            val world = World(50, 4, 50)
+                            val world = World(50, 10, 50)
                             val config = Lwjgl3ApplicationConfiguration()
                             config.setTitle("Nightfall")
                             config.setWindowedMode(800, 600)
