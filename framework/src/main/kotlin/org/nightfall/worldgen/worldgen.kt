@@ -4,8 +4,8 @@ import org.nightfall.Point
 import org.nightfall.materials.TileInstance
 import org.nightfall.mods.Mods
 import org.nightfall.TileMap
+import org.nightfall.instance
 import java.io.Serializable
-import kotlin.reflect.full.primaryConstructor
 
 class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
     private var initialized = false
@@ -16,14 +16,12 @@ class World(val sizeX: Int, val sizeY: Int, val sizeZ: Int): Serializable {
     }
 
     fun initialize() = if(!initialized) {
-        val worldGenerators: List<WorldGenerator> = Mods.worldGenerators.map {
-            it.primaryConstructor?.call() ?: throw IllegalStateException("WorldGenerator must have a constructor")
-        }.sortedBy { it.order.value }
+        val worldGenerators = Mods.worldGenerators.map { it.instance }.sortedBy { it!!.order.value }
         worldGenerators.forEach {
             for(x in 0..sizeX) {
                 for(y in 0..sizeY) {
                     for(z in 0..sizeZ) {
-                        val newBlock = it.addBlock(this, x, y, z)
+                        val newBlock = it!!.addBlock(this, x, y, z)
                         if(newBlock is TileInstance<*>) {
                             this[Point(x, y, z)] = newBlock
                         }

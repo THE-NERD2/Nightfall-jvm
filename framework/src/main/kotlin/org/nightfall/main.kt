@@ -5,12 +5,11 @@ import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
 import com.formdev.flatlaf.FlatDarkLaf
 import net.miginfocom.swing.MigLayout
 import java.io.File
-import javax.swing.JButton
-import javax.swing.JFrame
-import javax.swing.JPanel
-import javax.swing.SwingUtilities
 import org.nightfall.mods.Mods
 import org.nightfall.worldgen.World
+import javax.swing.*
+
+private lateinit var frame: JFrame
 
 class UI: JPanel() {
     init {
@@ -20,13 +19,24 @@ class UI: JPanel() {
             add(JButton("Create world").apply {
                 addActionListener {
                     // TODO: get size from user
-                    val world = World(30, 4, 30)
-                    val config = Lwjgl3ApplicationConfiguration()
-                    config.setTitle("Nightfall")
-                    config.setWindowedMode(800, 600)
-                    config.useVsync(true)
-                    config.setForegroundFPS(60)
-                    Lwjgl3Application(GameWindow(world), config)
+                    val dialog = JDialog(frame)
+                    dialog.layout = MigLayout()
+                    Mods.checkboxSettings.map { it.instance!! }.forEach { dialog.add(it, "wrap") }
+                    dialog.add(JButton("OK").apply {
+                        addActionListener {
+                            dialog.isVisible = false
+                            val world = World(50, 4, 50)
+                            val config = Lwjgl3ApplicationConfiguration()
+                            config.setTitle("Nightfall")
+                            config.setWindowedMode(800, 600)
+                            config.useVsync(true)
+                            config.setForegroundFPS(60)
+                            Lwjgl3Application(GameWindow(world), config)
+                        }
+                    })
+                    dialog.pack()
+                    dialog.title = "Settings"
+                    dialog.isVisible = true
                 }
             }, "east")
         }, "north")
@@ -44,7 +54,7 @@ fun main(args: Array<String>) {
     Mods.initialize(args)
     FlatDarkLaf.setup()
     SwingUtilities.invokeLater {
-        val frame = JFrame("Nightfall")
+        frame = JFrame("Nightfall")
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
         frame.contentPane = UI()
         frame.setSize(800, 600)

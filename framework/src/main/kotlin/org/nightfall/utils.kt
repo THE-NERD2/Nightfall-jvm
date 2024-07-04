@@ -1,6 +1,8 @@
 package org.nightfall
 
 import org.nightfall.materials.TileInstance
+import kotlin.reflect.KClass
+import kotlin.reflect.full.createInstance
 
 data class Point(val x: Int, val y: Int, val z: Int) {
     val up by lazy { Point(x, y + 1, z) }
@@ -28,3 +30,16 @@ class TileMap(
         return map[key]
     }
 }
+
+val <T: Any> KClass<T>.instance: T?
+    get() {
+        try {
+            return createInstance()
+        } catch(e: IllegalArgumentException) {
+            try {
+                return objectInstance
+            } catch(e: IllegalArgumentException) {
+                return null
+            }
+        }
+    }

@@ -4,11 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="No more texturing models at runtime, fixes rendering">
+    <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="worldgen refactoring (for real this time)">
+      <change afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/settings/settings.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/tiles/tiles.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/framework/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/gdx.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/materials/materials.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/mods/mods.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/mods/mods.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/utils.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/worldgen/worldgen.kt" afterDir="false" />
     </list>
@@ -52,29 +56,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Nightfall.executor": "Run",
-    "Gradle.Build Nightfall-jvm.executor": "Run",
-    "Gradle.Build all.executor": "Run",
-    "Gradle.Build framework.executor": "Run",
-    "Gradle.Build mods.executor": "Run",
-    "Gradle.Build.executor": "Run",
-    "Gradle.Nightfall-jvm [:MainKt.main()].executor": "Run",
-    "Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Shell Script.Build.executor": "Run",
-    "Shell Script.Nightfall.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "settings.editor.selected.configurable": "shared-indexes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Nightfall.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Nightfall-jvm.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build all.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build framework.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build mods.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Nightfall-jvm [:MainKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Shell Script.Build.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Nightfall.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
   },
-  "keyToStringList": {
-    "kotlin-gradle-user-dirs": [
-      "/home/payton/.gradle"
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/home/payton/.gradle&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/default-mods/src/main/resources" />
@@ -225,7 +229,31 @@
       <option name="project" value="LOCAL" />
       <updated>1719865740485</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added frustum and occlusion culling optimizations">
+      <option name="closed" value="true" />
+      <created>1719948623963</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719948623963</updated>
+    </task>
+    <task id="LOCAL-00006" summary="worldgen refactoring">
+      <option name="closed" value="true" />
+      <created>1719949387529</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719949387529</updated>
+    </task>
+    <task id="LOCAL-00007" summary="worldgen refactoring (for real this time)">
+      <option name="closed" value="true" />
+      <created>1719949834124</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719949834124</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,7 +272,10 @@
     <MESSAGE value="Added world generation" />
     <MESSAGE value="New worlds now opened in game window. GLTF rendering broken" />
     <MESSAGE value="No more texturing models at runtime, fixes rendering" />
-    <option name="LAST_COMMIT_MESSAGE" value="No more texturing models at runtime, fixes rendering" />
+    <MESSAGE value="Added frustum and occlusion culling optimizations" />
+    <MESSAGE value="worldgen refactoring" />
+    <MESSAGE value="worldgen refactoring (for real this time)" />
+    <option name="LAST_COMMIT_MESSAGE" value="worldgen refactoring (for real this time)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -12,7 +12,6 @@ import ktx.app.clearScreen
 import org.nightfall.materials.TileInstance
 import org.nightfall.mods.Mods
 import org.nightfall.worldgen.World
-import kotlin.reflect.full.createInstance
 
 class GameWindow(private val world: World): KtxApplicationAdapter {
     private lateinit var env: Environment
@@ -33,20 +32,10 @@ class GameWindow(private val world: World): KtxApplicationAdapter {
         camController = CameraInputController(cam)
         Gdx.input.inputProcessor = camController
         modelBatch = ModelBatch()
-        Mods.tiles.map {
-            try {
-                it.createInstance()
-            } catch(e: IllegalArgumentException) {
-                try {
-                    it.objectInstance
-                } catch(e: IllegalArgumentException) {
-                    null
-                }
-            }
-        }.also {
+        Mods.tiles.map { it.instance }.also {
             it.forEach {
-                it?.load()
-                it?.initialize()
+                it!!.load()
+                it.initialize()
             }
         }
         world.initialize()
