@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a26d9b7-53ca-4b4b-bd06-69b1f8a3177d" name="Changes" comment="Lots of API refactoring to prepare for new world generation">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/default-mods/src/main/kotlin/org/nightfall/default/worldgen/worldgen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/framework/src/main/kotlin/org/nightfall/main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +33,25 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "THE-NERD2"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/THE-NERD2/Nightfall-jvm.git",
+    "accountId": "2bd42a60-51b1-44ca-a8f3-35a64abb7afa"
+  }
+}]]></component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
@@ -49,29 +64,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Nightfall.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build Nightfall-jvm.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build all.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build framework.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build mods.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Nightfall-jvm [:MainKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Shell Script.Build.executor&quot;: &quot;Run&quot;,
-    &quot;Shell Script.Nightfall.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/home/payton/.gradle&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Nightfall.executor": "Run",
+    "Gradle.Build Nightfall-jvm.executor": "Run",
+    "Gradle.Build all.executor": "Run",
+    "Gradle.Build framework.executor": "Run",
+    "Gradle.Build mods.executor": "Run",
+    "Gradle.Build.executor": "Run",
+    "Gradle.Nightfall-jvm [:MainKt.main()].executor": "Run",
+    "Gradle.Nightfall-jvm:framework [:framework:MainKt.main()].executor": "Run",
+    "Gradle.Nightfall-jvm:framework [:framework:org.nightfall.MainKt.main()].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Shell Script.Build.executor": "Run",
+    "Shell Script.Nightfall.executor": "Run",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "uiupdate",
+    "kotlin-language-version-configured": "true",
+    "settings.editor.selected.configurable": "shared-indexes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/default-mods/src/main/resources" />

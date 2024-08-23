@@ -2,7 +2,7 @@ package org.nightfall
 
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3Application
 import com.badlogic.gdx.backends.lwjgl3.Lwjgl3ApplicationConfiguration
-import com.formdev.flatlaf.FlatDarkLaf
+import com.formdev.flatlaf.FlatLightLaf
 import net.miginfocom.swing.MigLayout
 import java.io.File
 import org.nightfall.mods.Mods
@@ -13,7 +13,7 @@ private lateinit var frame: JFrame
 
 class UI: JPanel() {
     init {
-        layout = MigLayout("fill")
+        layout = MigLayout()
         add(JPanel().apply {
             layout = MigLayout()
             add(JButton("Create world").apply {
@@ -39,7 +39,7 @@ class UI: JPanel() {
                     dialog.isVisible = true
                 }
             }, "east")
-        }, "north")
+        })
         File("world/").list()?.forEach {
             add(JButton(it).apply {
                 addActionListener {
@@ -52,7 +52,7 @@ class UI: JPanel() {
 
 fun main(args: Array<String>) {
     Mods.initialize(args)
-    FlatDarkLaf.setup()
+    FlatLightLaf.setup()
     SwingUtilities.invokeLater {
         frame = JFrame("Nightfall")
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
